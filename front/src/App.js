@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import { Article } from "./Article";
+import { Comment } from "./Comment";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>hello world</h1>
+      <Article title={"test"} id={"1"} description={"これはテストです"} deadline={"2020 - 01 - 07T00:00: 00Z"} created_at={"2020-01-01T00:00:00Z"} />
+      <h3>コメント</h3>
+      <Comment content={"内容"} id={"1"} created_at={"2020-01-01T00:00:00Z"} />
     </div>
   );
 }
