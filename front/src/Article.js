@@ -1,7 +1,7 @@
 import './Article.css'
 
-
-export const Article = Article => {
+export const Article = (props) => {
+    const { title, id, description, deadline, created_at } = props.content
     return (
         <div>
             <table className="content">
@@ -12,11 +12,11 @@ export const Article = Article => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{Article.id}</td><td>{Article.title}</td><td>{Article.description}</td>
+                        <td>{id}</td><td>{title}</td><td>{description}</td>
                     </tr>
                 </tbody>
             </table>
-            <p>締切 {Article.deadline}  /  作成日 {Article.created_at}</p>
+            <p>締切 {deadline}  /  作成日 {created_at}</p>
         </div>
 
     );
