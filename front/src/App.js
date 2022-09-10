@@ -21,6 +21,11 @@ function App() {
         crossorigin="anonymous"
       />
       <h1>hello world</h1>
+      {
+        content_data.map((content) =>
+          <Article content={content} key={content.id} />
+        )
+      }
       <Article content={content_data[0]} />
       <Article content={content_data[1]} />
       <Article content={content_data[2]} />
