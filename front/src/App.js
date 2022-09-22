@@ -26,9 +26,6 @@ function App() {
           <Article content={content} key={content.id} />
         )
       }
-      <Article content={content_data[0]} />
-      <Article content={content_data[1]} />
-      <Article content={content_data[2]} />
       <h3>コメント</h3>
       <Comment content={"内容"} id={"1"} created_at={"2020-01-01T00:00:00Z"} />
     </div>
