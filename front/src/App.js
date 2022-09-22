@@ -14,7 +14,7 @@ function App() {
     { title: "test2", id: "2", description: "これはテストです", deadline: "2020 - 01 - 07T00:00: 00Z", created_at: "2020-01-01T00:00:00Z" },
     { title: "test3", id: "3", description: "これはテストです", deadline: "2020 - 01 - 07T00:00: 00Z", created_at: "2020-01-01T00:00:00Z" }
   ]
-
+  const [posts, setPosts] = useState([]);
   useEffect(() => {
     const postData = collection(db, "posts");
     getDocs(postData).then((snapshot) => {
