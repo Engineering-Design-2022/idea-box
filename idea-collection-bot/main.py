@@ -31,3 +31,12 @@ class IdeaCollectionBot:
             return response.json()
         else:
             return "error"
+
+
+def main():
+    bot = IdeaCollectionBot()
+    print("話しかけてください")
+    audio = bot.listen()
+    idea = bot.recognize(audio)
+    print(idea)
+    bot.post_idea(idea, "", "")
